@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/data-quality/static/css/main.f65ab284.css",
+    "main.js": "/data-quality/static/js/main.9ef24ade.js",
+    "static/media/russia.svg": "/data-quality/static/media/russia.7a603753220c9ac9464e432c36b05a23.svg",
+    "static/media/Illustration.svg": "/data-quality/static/media/Illustration.a56100fe06d8436595b0a4d9a1e45cef.svg",
+    "static/media/tamoderustic-semibold.woff2": "/data-quality/static/media/tamoderustic-semibold.6477657bc40b9665f1f7.woff2",
+    "static/media/moderustic-medium.woff2": "/data-quality/static/media/moderustic-medium.f4a6a567f3935e5fde39.woff2",
+    "static/media/involve-bold.woff2": "/data-quality/static/media/involve-bold.ba9e87576caa7dc64f63.woff2",
+    "static/media/involve-regular.woff2": "/data-quality/static/media/involve-regular.66e604a5f84e5a134643.woff2",
+    "static/media/Vector.svg": "/data-quality/static/media/Vector.955dc4fa10b12e602d0c039d899df987.svg",
+    "static/media/logo.svg": "/data-quality/static/media/logo.631ddd8260ce43976628a95de0bda018.svg",
+    "index.html": "/data-quality/index.html",
+    "main.f65ab284.css.map": "/data-quality/static/css/main.f65ab284.css.map",
+    "main.9ef24ade.js.map": "/data-quality/static/js/main.9ef24ade.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f65ab284.css",
+    "static/js/main.9ef24ade.js"
+  ]
+}
