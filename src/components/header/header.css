@@ -1,0 +1,48 @@
+.header{
+    margin: 25px 0;
+}
+.header_inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.header_logo {
+    width: 207px;
+    height: 34px;
+}
+
+.header_services {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header_services_tel {
+    border-radius: 300px;
+    padding: 16px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+}
+
+.header_nav{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+.header_nav > .menu-item-has-children{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.header_nav > .menu-item-has-children::after{
+    content: '';
+    background-image: url('data:image/svg+xml,%3Csvg%20width=%227%22%20height=%226%22%20viewBox=%220%200%207%206%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d=%22M3.46412%206L0%200L6.92822%200L3.46412%206Z%22%20fill=%22%23283034%22/%3E%3C/svg%3E');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7px;
+    height: 6px;
+}   

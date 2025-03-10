@@ -1,0 +1,15 @@
+:root {
+    --font-family: "Involve", sans-serif;
+    --second-family: "Moderustic", sans-serif;
+    --third-family: "Alata", sans-serif;
+
+    --content-width: 1312px;
+    /* --content-fluid-width: 1690px; */
+    --container-offset: 30px;
+    --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+    /* --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2)); */
+
+    --accent-color: #45b0f0;
+    --text-color: #283034;
+    --background-color: #9bd4f7;
+}

@@ -1,0 +1,174 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: auto;
+    color: var(--text-color);
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-wrap {
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.btn-reset {
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.list-reset {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hyphenated {
+    hyphens: auto;
+    word-break: break-word;
+}
+
+.h-reset {
+    margin: 0;
+    font-size: inherit;
+}
+
+.flex-row {
+    display: flex;
+    align-items: center;
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    z-index: 1;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.grid-row {
+    display: grid;
+}
+
+.accent_button {
+    display: block;
+    max-width: max-content;
+    border-radius: 300px;
+    padding: 16px 24px;
+    background: var(--accent-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 120%;
+    color: #fff;
+}
+
+.accent_button.project_link {
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.accent_button.project_link::after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url('data:image/svg+xml,%3Csvg%20width=%2224%22%20height=%2224%22%20viewBox=%220%200%2024%2024%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%20%20%20%3Cpath%20d=%22M5.09449%2018.9053C4.98837%2018.7992%204.90419%2018.6733%204.84676%2018.5347C4.78933%2018.3961%204.75977%2018.2476%204.75977%2018.0976C4.75977%2017.9476%204.78933%2017.799%204.84676%2017.6604C4.90419%2017.5218%204.98837%2017.3959%205.09449%2017.2899L18.0363%204.34808C18.1416%204.23897%2018.2676%204.15191%2018.4069%204.092C18.5462%204.03209%2018.696%204.00052%2018.8476%203.99913C18.9992%203.99774%2019.1496%204.02656%2019.29%204.08391C19.4303%204.14126%2019.5579%204.226%2019.6652%204.33316C19.7724%204.44033%2019.8573%204.56779%2019.9148%204.7081C19.9722%204.84841%2020.0012%204.99876%2020%205.15038C19.9987%205.30201%2019.9673%205.45186%2019.9075%205.59121C19.8477%205.73056%2019.7608%205.8566%2019.6518%205.96199L6.70993%2018.9038C6.49582%2019.1176%206.20558%2019.2377%205.90297%2019.2377C5.60036%2019.2377%205.31012%2019.1176%205.09601%2018.9038L5.09449%2018.9053Z%22%20fill=%22white%22%20/%3E%20%20%20%3Cpath%20d=%22M4%205.15502C4%204.85216%204.12031%204.56171%204.33446%204.34756C4.54861%204.13341%204.83907%204.0131%205.14193%204.0131L18.8451%204.0131C19.1479%204.0131%2019.4384%204.1334%2019.6525%204.34756C19.8667%204.56171%2019.987%204.85216%2019.987%205.15502L19.987%2018.8581C19.987%2019.1609%2019.8667%2019.4514%2019.6525%2019.6655C19.4384%2019.8797%2019.1479%2020%2018.8451%2020C18.5422%2020%2018.2517%2019.8797%2018.0376%2019.6655C17.8234%2019.4514%2017.7031%2019.1609%2017.7031%2018.8581L17.7031%206.29694L5.14193%206.29694C4.83907%206.29694%204.54861%206.17663%204.33446%205.96248C4.12031%205.74833%204%205.45788%204%205.15502Z%22%20fill=%22white%22%20/%3E%20%3C/svg%3E');
+}
+
+.section {
+    margin: 120px 0;
+}
+
+.project_title_h1 {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 76px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.project_title {
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-align: center;
+}
+
+.project_description {
+    line-height: 140%;
+    text-align: center;
+    margin: 0;
+    text-wrap: balance;
+}
+
+.mb40 {
+    margin-bottom: 40px;
+}
+
+.mb60 {
+    margin-bottom: 60px;
+}
+
+.mt60 {
+    margin-top: 60px;
+}
