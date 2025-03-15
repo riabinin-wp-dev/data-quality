@@ -1,0 +1,36 @@
+.cases_inner {
+    background: #fcecdd;
+    padding: 64px;
+    position: relative;
+    border-radius: 32px;
+
+    & .project_title {
+        margin-bottom: 40px;
+    }
+}
+
+.cases_eye {
+    position: absolute;
+    top: 56px;
+    left: 56px;
+    z-index: 1;
+}
+
+#cases_wrapper {
+    display: grid;
+    grid-template-columns: 64px 1fr 64px;
+    gap: 40px;
+    align-items: center;
+}
+
+.embla {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+}
+
+.embla__slide {
+    flex: 0 0 100%;
+}

@@ -1,22 +1,34 @@
 import Header from './components/header/Header';
-import './styles/settings.css';
+import './styles/settings.scss';
 import './styles/fonts.css';
 import './styles/vars.css';
 import Intro from './components/intro/Intro';
 import Banner from './components/banner/Banner';
 import Services from './components/services/Services';
 import Benefits from './components/benefits/Benefits';
-import Map from './components/map/Map';
+import Works from './components/works/works';
+import Sfera from './components/sfera/Sfera';
+import Cases from './components/cases/Cases';
+import Questions from './components/questions/Questions';
+import Form from './components/form/Form';
+import Footer from './components/footer/Footer';
+import Checks from './components/checks/Checks';
 
 function App(){
     return(
         <div className="App">
-            <Header></Header>
-            <Intro></Intro>
-            <Banner></Banner>
-            <Services></Services>
-            <Benefits></Benefits>
-            <Map></Map>
+            <Header />
+            <Intro />
+            <Banner />
+            <Services />
+            <Benefits />
+            <Checks />
+            <Works />
+            <Sfera />
+            <Cases />
+            <Questions />
+            <Form />
+            <Footer />
         </div>
     );
 }

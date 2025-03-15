@@ -1,0 +1,52 @@
+.sfera_item {
+    display: grid;
+    grid-template-columns: 80px 1fr 84px;
+    align-items: center;
+    gap: 24px;
+    background: #eef8fe;
+    border: 1px solid #d2dade;
+    border-radius: 24px;
+    padding: 32px 24px;
+
+    &:last-child{
+        grid-column: 2 span;
+    }
+
+    & .img-wrap {
+        background: #fff;
+        border: 1px solid #d2dade;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        & img {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+        }
+    }
+
+
+}
+
+.sfera_item_title {
+    display: block;
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.03em;
+    color: #283034;
+}
+
+.sfera_item_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 300px;
+    padding: 24px 32px;
+    background-color: var(--accent-color);
+    cursor: pointer;
+}

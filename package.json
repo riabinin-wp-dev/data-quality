@@ -1,6 +1,6 @@
 {
   "name": "data-quality",
-  "homepage": "https://github.com/riabinin-wp-dev/data-quality.git",
+  "homepage": "https://riabinin-wp-dev.github.io/data-quality",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,11 +9,13 @@
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
     "css-loader": "^7.1.2",
+    "embla-carousel-react": "^8.5.2",
     "express": "^4.21.2",
     "file-system": "^2.2.2",
     "framer-motion": "^12.4.10",
     "fs": "^0.0.1-security",
     "react": "^19.0.0",
+    "react-collapse": "^5.1.1",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
     "sass-loader": "^16.0.5",
@@ -55,8 +57,13 @@
     "gh-pages": "^6.3.0",
     "html-webpack-plugin": "^5.6.3",
     "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.85.1",
     "terser-webpack-plugin": "^5.3.11",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:riabinin-wp-dev/data-quality.git"
   }
 }
