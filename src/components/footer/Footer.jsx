@@ -3,6 +3,14 @@ import dataQuality from './images/Data-Quality.svg';
 import './footer.scss';
 
 const Footer = () => {
+
+        const scrollToTop = () => {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth', // Добавляет плавность прокрутке
+          });
+        };
+
     return (
         <footer className="footer">
             <div className="container">
@@ -58,7 +66,7 @@ const Footer = () => {
                     </div>
                     <div className="footer_inner_bottom">
                         <small>© ООО «Дата Кволити», {new Date().getFullYear()}</small>
-                        <button type="button" className='btn-reset button_to_top'>
+                        <button type="button" className='btn-reset button_to_top' onClick={scrollToTop}>
                             Наверх
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7.92874 13.1749C8.0225 13.1749 8.11535 13.1565 8.20198 13.1206C8.28862 13.0847 8.36733 13.0321 8.43363 12.9658C8.49993 12.8995 8.55252 12.8208 8.58839 12.7342C8.62425 12.6476 8.6427 12.5547 8.64267 12.461L8.64261 1.02186C8.6443 0.92711 8.6271 0.832968 8.59202 0.744932C8.55694 0.656895 8.50468 0.576727 8.43828 0.509104C8.37189 0.441481 8.29269 0.387759 8.20531 0.351072C8.11793 0.314384 8.02412 0.295466 7.92935 0.295421C7.83458 0.295375 7.74075 0.314204 7.65334 0.350808C7.56593 0.387413 7.48668 0.441061 7.42022 0.50862C7.35376 0.576179 7.30142 0.656297 7.26626 0.7443C7.2311 0.832303 7.21381 0.926427 7.21541 1.02118L7.21547 12.4603C7.21559 12.6494 7.29078 12.8308 7.42452 12.9645C7.55825 13.0982 7.73961 13.1734 7.92874 13.1735L7.92874 13.1749Z" fill="white" />

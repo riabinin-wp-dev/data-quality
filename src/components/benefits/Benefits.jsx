@@ -1,4 +1,4 @@
-import './benefits.css';
+import './benefits.scss';
 import vector from './images/Vector.svg';
 
 const Benefits = () => {
@@ -8,7 +8,7 @@ const Benefits = () => {
                 <div className="benefits_inner">
                     <div className="benefits_inner_item">
                         <h2 className="project_title">Наши преимущества</h2>
-                        <img src={vector} alt="vektor" width={365} height={633} />
+                        <img src={vector} className='benefits_inner_item_img' alt="vektor" width={365} height={633} />
                     </div>
                     <div className="benefits_inner_item">
                         <ul className="beneefits_item_list list-reset">
@@ -29,7 +29,7 @@ const Benefits = () => {
                             <li>
                                 <div className="content_wrapper">
                                     <h3 className='beneefits_item_list_title'>Точно подбираем каждого исполнителя</h3>
-                                    <p>в соответствии с вашими требованиями</p>
+                                    <p>под ваш запрос</p>
                                 </div>
                             </li>
 

@@ -1,0 +1,13 @@
+@import '../../styles/breakpoint.scss';
+
+.map .project_title{
+    margin-bottom: 55px;
+
+    @include big-desktop{
+        margin-bottom: calc(55 / 14.4 * 1vw);
+    }
+}
+.source_map{
+    max-width: 100%;
+    height: auto;
+}

@@ -1,11 +1,27 @@
+@import '../../styles/breakpoint.scss';
+
 .sfera{
+    margin-top: 120px;
+
+    @include big-desktop{
+        margin-top: calc(120 / 1440 * 100vw);
+    }
+
     & .project_title{
         margin-bottom: 56px;
+
+        @include big-desktop{
+            margin-bottom: calc(56 / 1440 * 100vw);
+        }
     }
 
     & .grid-row{
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 32px;
+
+        @include big-desktop{
+            gap: calc(32 / 1440 * 100vw);
+        }
     }
 }

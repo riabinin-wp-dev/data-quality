@@ -1,0 +1,146 @@
+@import '../../styles/breakpoint.scss';
+
+.header {
+    margin-bottom: 25px;
+
+    @include big-desktop {
+        margin-bottom: calc(25 / 14.4 * 1vw);
+    }
+}
+
+.header_inner {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+
+    @include big-desktop {
+        gap: calc(40 / 14.4 * 1vw);
+    }
+}
+
+.header_logo {
+    width: 207px;
+    height: 34px;
+
+    @include big-desktop {
+        width: calc(207 / 14.4 * 1vw);
+        height: calc(34 / 14.4 * 1vw);
+    }
+}
+
+.header_services {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.header_services_tel {
+    border-radius: 300px;
+    padding: 16px 0px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 110%;
+
+    @include big-desktop {
+        border-radius: calc(300 / 14.4 * 1vw);
+        padding: calc(16 / 14.4 * 1vw) 0;
+        font-size: calc(18 / 14.4 * 1vw);
+    }
+}
+
+.header_nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    @include big-desktop {
+        gap: calc(32 / 14.4 * 1vw);
+    }
+}
+
+.header_nav>.menu-item-has-children {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include big-desktop {
+        gap: calc(8 / 14.4 * 1vw);
+    }
+}
+
+.header_nav>.menu-item-has-children::after {
+    content: '';
+    background-image: url('data:image/svg+xml,%3Csvg%20width=%227%22%20height=%226%22%20viewBox=%220%200%207%206%22%20fill=%22none%22%20xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d=%22M3.46412%206L0%200L6.92822%200L3.46412%206Z%22%20fill=%22%23283034%22/%3E%3C/svg%3E');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 7px;
+    height: 6px;
+
+    @include big-desktop {
+        width: calc(7 / 14.4 * 1vw);
+        height: calc(6 / 14.4 * 1vw);
+    }
+}
+
+.header_top {
+    background: #3c484f;
+    margin-bottom: 12px;
+
+    @include big-desktop{
+        margin-bottom: calc(12 / 14.4 * 1vw);
+    }
+}
+
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+
+    @include big-desktop{
+        padding: calc(8 / 14.4 * 1vw);
+    }
+}
+
+.header_wraper_city {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    @include big-desktop{
+        gap: calc(8 / 14.4 * 1vw);
+    }
+
+    & svg {
+        width: 14px;
+        height: 20px;
+
+        @include big-desktop{
+            width: calc(14 / 14.4 * 1vw);
+            height: calc(20 / 14.4 * 1vw);
+        }
+    }
+}
+
+.header_wraper_city_curent {
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+
+    @include big-desktop{
+        font-size: calc(16 / 14.4 * 1vw);
+    }
+}
+
+.header_wrapper_tel {
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+
+    @include big-desktop{
+        font-size: calc(16 / 14.4 * 1vw);
+    }
+}

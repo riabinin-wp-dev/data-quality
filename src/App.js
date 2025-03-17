@@ -1,7 +1,8 @@
 import Header from './components/header/Header';
 import './styles/settings.scss';
 import './styles/fonts.css';
-import './styles/vars.css';
+import './styles/vars.scss';
+import './styles/breakpoint.scss';
 import Intro from './components/intro/Intro';
 import Banner from './components/banner/Banner';
 import Services from './components/services/Services';

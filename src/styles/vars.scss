@@ -1,3 +1,4 @@
+@import './breakpoint.scss';
 :root {
     --font-family: "Involve", sans-serif;
     --second-family: "Moderustic", sans-serif;
@@ -12,4 +13,10 @@
     --accent-color: #45b0f0;
     --text-color: #283034;
     --background-color: #9bd4f7;
+}
+@include big-desktop {
+    :root{
+        --content-width: calc(1312 / 14.4 * 1vw);
+        --container-offset: calc(30 / 14.4 * 1vw);
+    }
 }

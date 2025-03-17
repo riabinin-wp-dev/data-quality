@@ -1,3 +1,4 @@
+import './map.scss';
 const Map = () => {
 
     return (

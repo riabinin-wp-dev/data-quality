@@ -1,4 +1,4 @@
-import './worksItem.css';
+import './worksItem.scss';
 
 const WorksItem = (props) => {
     return (

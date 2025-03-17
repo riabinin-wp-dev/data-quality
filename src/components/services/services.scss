@@ -1,8 +1,17 @@
+@import '../../styles/breakpoint.scss';
+
 .services_list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 32px;
     margin-top: 56px;
+
+    @include big-desktop{
+        // grid-template-columns: repeat(auto-fit, minmax( calc(270 / 14.4 * 1vw)));
+        gap: calc(32 / 14.4 * 1vw);
+        grid-template-columns: repeat( 4 , 1fr);
+        margin-top: calc( 56 / 14.4 * 1vw);
+    }
 }
 
 .services_list .img-wrap {
@@ -13,6 +22,12 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    @include big-desktop{
+        border-radius: calc(16 / 14.4 * 1vw);
+        width: calc(80 / 14.4 * 1vw);
+        height: calc(80 / 14.4 * 1vw);
+    }
 }
 
 .services_list li:nth-child(1) .img-wrap {
@@ -37,6 +52,12 @@
     object-fit: contain;
     object-position: center;
     margin-right: -5px;
+
+    @include big-desktop{
+        width: calc(60 / 14.4 * 1vw);
+        height: calc(60 / 14.4 * 1vw);
+        margin-right: calc(-5 / 14.4 * 1vw);
+    }
 }
 
 .services_list>li {
@@ -46,6 +67,12 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
+
+    @include big-desktop{
+        border-radius: calc(24 / 14.4 * 1vw);
+        padding: calc(24 / 14.4 * 1vw);
+        border-width: calc( 1 / 14.4 * 1vw);
+    }
 }
 
 .services_list_title {
@@ -56,11 +83,21 @@
     line-height: 100%;
     letter-spacing: -0.03em;
     margin-top: 24px;
+
+    @include big-desktop{
+        font-size: calc(20 / 14.4 * 1vw);
+        margin-top: calc(24 / 14.4 * 1vw);
+    }
 }
 
 .services_list_items {
     margin-top: 16px;
     margin-bottom: 24px;
+
+    @include big-desktop{
+        margin-top: calc(16 / 14.4 * 1vw);
+        margin-bottom: calc(24 / 14.4 * 1vw);
+    }
 }
 
 .services_list_items li {
@@ -68,9 +105,18 @@
     gap: 12px;
     align-items: center;
     padding: 2px;
+
+    @include big-desktop{
+        gap: calc(12 / 14.4 * 1vw);
+        padding: calc(2 / 14.4 * 1vw);
+    }
 }
 .services_list_items li:not(:last-child){
     margin-bottom: 4px;
+
+    @include big-desktop{
+        margin-bottom: calc(4 / 14.4 * 1vw);
+    }
 }
 .services_list_items li::before{
     height: 8px;
@@ -78,10 +124,20 @@
     border-radius: 50%;
     content: '';
     background-color: var(--accent-color);
+
+    @include big-desktop{
+        height: calc(8 / 14.4 * 1vw);
+        width: calc(8 / 14.4 * 1vw);
+    }
 }
 .services_inner_more.project_link{
     font-size: 16px;
     padding: 24px 32px;
     margin-top: auto;
     margin-left: unset;
+
+    @include big-desktop{
+        font-size: calc(16 / 14.4 * 1vw);
+        padding: calc(24 / 14.4 * 1vw) calc(32 / 14.4 * 1vw);
+    }
 }

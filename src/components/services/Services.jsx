@@ -1,4 +1,4 @@
-import './services.css';
+import './services.scss';
 import logo1 from './services/photo-camera 1.png';
 import logo2 from './services/photo-camera 2.png';
 import logo3 from './services/photo-camera 3.png';

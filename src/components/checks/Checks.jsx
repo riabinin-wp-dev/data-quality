@@ -6,7 +6,7 @@ const Checks = (props) => {
     return (
         <section className="section map">
             <div className="container">
-                <h2 className="project_title">Проводим проверки в  <br /> 85 городах РФ</h2>
+                <h2 className="project_title">Проводим проверки <br /> в  85 городах РФ</h2>
                 <div className="img-wrap">
                     <Map />
                 </div>

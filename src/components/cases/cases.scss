@@ -1,11 +1,24 @@
+@import '../../styles/breakpoint.scss';
+
 .cases_inner {
     background: #fcecdd;
     padding: 64px;
+    padding-bottom: 44px;
     position: relative;
     border-radius: 32px;
 
+    @include big-desktop{
+        padding: calc(64 / 14.4 * 1vw);
+        padding-bottom: calc(44 / 14.4 * 1vw);
+        border-radius: calc(32 / 14.4 * 1vw);
+    }
+
     & .project_title {
         margin-bottom: 40px;
+
+        @include big-desktop{
+            margin-bottom: calc(40 / 14.4 *  1vw);
+        }
     }
 }
 
@@ -14,6 +27,11 @@
     top: 56px;
     left: 56px;
     z-index: 1;
+
+    @include big-desktop{
+        top: calc(56 / 14.4 * 1vw);
+        left: calc(56 / 14.4 * 1vw);
+    }
 }
 
 #cases_wrapper {
@@ -21,6 +39,11 @@
     grid-template-columns: 64px 1fr 64px;
     gap: 40px;
     align-items: center;
+
+    @include big-desktop{
+        grid-template-columns: calc(64 / 14.4 * 1vw) 1fr calc(64 / 14.4 * 1vw);
+        gap: calc(40 / 14.4 * 1vw);
+    }
 }
 
 .embla {
@@ -33,4 +56,11 @@
 
 .embla__slide {
     flex: 0 0 100%;
+}
+.slider_dots{
+    margin-top: -40px;
+
+    @include big-desktop{
+        margin-top: calc(-40 / 14.4 * 1vw);
+    }
 }

@@ -1,14 +1,26 @@
+@import '../../styles/breakpoint.scss';
+
 .works .grid-row{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     position: relative;
+
+    @include big-desktop{
+        gap: calc(32 / 14.4 * 1vw);
+    }
 }
 .works .grid-row svg{
     position: absolute;
-    top: calc(100% / 3 / 2);
-    left: calc(100% / 4 / 2 - 16px);
+    top: 46.5px;
+    right: 0;
     z-index: 1;
+
+    @include big-desktop{
+        top: calc(46.5 / 14.4 * 1vw);
+        width: calc(1263 / 14.4 * 1vw);
+        height: calc(890 / 14.4 * 1vw);
+    }
 }
 
 .works_item:nth-child(1) { 

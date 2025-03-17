@@ -1,3 +1,5 @@
+@import '../../styles/breakpoint.scss';
+
 path {
     transition: fill 0.3s ease-in-out;
 }
@@ -7,12 +9,23 @@ path {
         fill: #69BFF3;
     }
 }
+.map{
+    margin-bottom: 134px;
+
+    @include big-desktop{
+        margin-bottom: calc(134 / 14.4 * 1vw);
+    }
+}
 
 .map_cities_names {
     & ul {
         display: flex;
         flex-wrap: wrap;
         gap: 8px;
+
+        @include big-desktop{
+            gap: calc(8 / 14.4 * 1vw);
+        }
     }
 
     & a {
@@ -26,6 +39,13 @@ path {
         border: 1px solid #d2dade;
         border-radius: 30px;
         transition: all 0.3s linear;
+
+        @include big-desktop{
+            font-size: calc(16 / 14.4 * 1vw);
+            padding: calc(12 / 14.4 * 1vw);
+            border-width: calc(1 / 14.4 * 1vw);
+            border-radius: calc(30 / 14.4 * 1vw);
+        }
 
         @media (hover:hover){
             &:hover{
@@ -41,6 +61,12 @@ path {
     grid-template-columns: 304px 1fr;
     gap: 32px;
     margin-top: 56px;
+
+    @include big-desktop{
+        grid-template-columns: calc(304 / 14.4 * 1vw) 1fr;
+        gap: calc(32 / 14.4 * 1vw);
+        margin-top: calc(56 / 14.4 * 1vw);
+    }
 }
 
 .map_cities_title {
@@ -51,6 +77,10 @@ path {
     line-height: 100%;
     letter-spacing: -0.03em;
     color: #283034;
+
+    @include big-desktop{
+        font-size: calc(20 / 14.4 * 1vw);
+    }
 }
 
 #cities_search {
@@ -61,10 +91,21 @@ path {
     // padding: 12px;
     margin-bottom: 24px;
 
+    @include big-desktop{
+        // padding: calc(12 / 14.4 * 1vw);
+        margin-bottom: calc(24 / 14.4 * 1vw);
+        border-radius: calc(30 / 14.4 * 1vw);
+        border-width: calc(1 / 14.4 * 1vw);
+    }
+
     & button{
         background-color: transparent;
         padding: 0 12px;
         border: none;
+
+        @include big-desktop{
+            padding:  0 calc(12 / 14.4 * 1vw);
+        }
     }
 
     & .project_input{
@@ -78,6 +119,10 @@ path {
 
         & + p{
             margin-top: 25px;
+
+            @include big-desktop{
+                margin-top: calc(25 / 14.4 * 1vw);
+            }
         }
     }
 }

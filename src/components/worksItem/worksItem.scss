@@ -1,3 +1,5 @@
+@import '../../styles/breakpoint.scss';
+
 .works_item {
     background-color: #fff;
     border: 1px solid #d2dade;
@@ -7,6 +9,11 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
+
+    @include big-desktop{
+        padding: calc(24 / 14.4 * 1vw);
+        border-radius: calc(24 / 14.4 * 1vw);
+    }
 }
 
 .works_item .img-wrap {
@@ -19,6 +26,13 @@
     align-items: center;
     justify-content: flex-end;
     margin-bottom: 40px;
+
+    @include big-desktop{
+        width: calc(80 / 14.4 * 1vw);
+        height: calc(80 / 14.4 * 1vw);
+        margin-bottom: calc(40 / 14.4 * 1vw);
+        border-width: calc(1 / 14.4 * 1vw);
+    }
 }
 
 .works_item .img-wrap img {
@@ -26,6 +40,11 @@
     height: 64px;
     object-fit: contain;
     object-position: center;
+
+    @include big-desktop{
+        width: calc(64 / 14.4 * 1vw);
+        height: calc(64 / 14.4 * 1vw);
+    }
 }
 
 .works_item_title {
@@ -38,6 +57,11 @@
     color: #283034;
     margin: 0;
     margin-bottom: 8px;
+
+    @include big-desktop{
+        font-size: calc(20 / 14.4 * 1vw);
+        margin-bottom: calc(8 / 14.4 * 1vw);
+    }
 }
 
 .work_item_desc {

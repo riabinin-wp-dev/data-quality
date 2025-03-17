@@ -1,6 +1,16 @@
+@import '../../styles/breakpoint.scss';
+
 .form {
+
+    &.section{
+        margin-bottom: 0;
+    }
     & .project_title {
         margin-bottom: 24px;
+
+        @include big-desktop{
+            margin-bottom: calc(24 / 14.4 * 1vw);
+        }
     }
 }
 
@@ -11,6 +21,11 @@
     font-size: 18px;
     line-height: 120%;
     color: #283034;
+
+    @include big-desktop{
+        font-size: calc(18 / 14.4 * 1vw);
+        margin-bottom: calc(56 / 14.4 * 1vw);
+    }
 }
 
 .form_inner {
@@ -22,9 +37,20 @@
     padding: 64px;
     // overflow: hidden;
 
+    @include big-desktop{
+        gap: calc(30 / 14.4 * 1vw);
+        padding: calc(64 / 14.4 * 1vw);
+        border-radius: calc(32 / 14.4 * 1vw);
+    }
+
     & .content-wrapper {
         margin-top: 8px;
         margin-bottom: 24px;
+
+        @include big-desktop{
+            margin-top: calc(8 / 14.4 * 1vw);
+            margin-bottom: calc(24 / 14.4 * 1vw);
+        }
     }
 }
 
@@ -33,6 +59,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 8px;
+        
+        @include big-desktop{
+            gap: calc(8 / 14.4 * 1vw);
+        }
 
         & span {
             display: block;
@@ -41,6 +71,10 @@
 
         &+.flex-row {
             margin-top: 8px;
+
+            @include big-desktop{
+                margin-top: calc(8 / 14.4 * 1vw);
+            }
         }
     }
 }
@@ -73,6 +107,15 @@
     width: 100%;
     max-width: 390px;
 
+    @include big-desktop{
+        bottom: calc(48 / 14.4 * 1vw - 64 / 14.4 * 1vw);
+        left: calc(50% - 32 / 14.4 * 1vw);
+        gap: calc(16 / 14.4 * 1vw);
+        border-radius: calc(16 / 14.4 * 1vw);
+        padding: calc(16 / 14.4 * 1vw);
+        max-width: calc(390 / 14.4 * 1vw);
+    }
+
 
     & dt {
         background: rgba(242, 212, 104, 0.2);
@@ -84,12 +127,24 @@
         align-items: center;
         justify-content: flex-end;
 
+        @include big-desktop{
+            border-radius: calc(16 / 14.4 * 1vw);
+            width: calc(64 / 14.4 * 1vw);
+            height: calc(64 / 14.4 * 1vw);
+            border-width: calc(1 / 14.4 * 1vw);
+        }
+
 
         & img {
             width: 56px;
             height: 56px;
             object-fit: contain;
             object-position: right;
+
+            @include big-desktop{
+                width: calc(56 / 14.4 * 1vw);
+                height: calc(56 / 14.4 * 1vw);
+            }
         }
     }
 
@@ -98,6 +153,10 @@
         flex-direction: column;
         gap: 8px;
 
+        @include big-desktop{
+            gap: calc(8 / 14.4 * 1vw);
+        }
+
         & strong {
             font-family: var(--second-family);
             font-weight: 600;
@@ -105,6 +164,10 @@
             line-height: 100%;
             letter-spacing: -0.03em;
             color: var(--text-color);
+
+            @include big-desktop{
+                font-size: calc(20 / 14.4 * 1vw);
+            }
         }
 
         & small {
@@ -122,6 +185,13 @@
     z-index: 1;
     width: 514px;
     height: 696px;
+
+    @include big-desktop{
+        bottom: calc(-65 / 14.4 * 1vw);
+        left: calc(50% - 32 / 14.4 * 1vw);
+        width: calc(514 / 14.4 * 1vw);
+        height: calc(696 / 14.4 * 1vw);
+    }
 }
 
 .submit_wrapper {
@@ -133,6 +203,10 @@
         left: calc(50% + 75px);
         transform: translate3d(-50%, -50%, 0);
         z-index: 1;
+
+        @include big-desktop{
+            left: calc(50% + 75 / 14.4 * 1vw);
+        }
     }
 }
 
@@ -144,4 +218,9 @@
     color: #283034;
     display: block;
     margin-top: 12px;
+
+    @include big-desktop{
+        font-size: calc(14 / 14.4 * 1vw);
+        margin-top: calc(12 / 14.4 * 1vw);
+    }
 }
