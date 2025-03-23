@@ -11,6 +11,10 @@
         @include big-desktop {
             margin-bottom: calc(56 / 1440 * 100vw);
         }
+
+        @include mobile{
+            margin-bottom: calc(32 / 373 * 100vw);
+        }
     }
 }
 
@@ -19,9 +23,14 @@
     border: 1px solid #d2dade;
     border-radius: 32px;
     padding: 24px 24px 24px 32px;
+    position: relative;
 
     @include big-desktop {
         padding: calc(24 / 14.4 * 1vw) calc(24 / 14.4 * 1vw) calc(24 / 14.4 * 1vw) calc(32 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        padding: calc(20 / 3.93 * 1vw);
     }
 
     &+& {
@@ -29,6 +38,10 @@
 
         @include big-desktop{
             margin-top: calc(20 / 1440 * 100vw);
+        }
+
+        @include mobile{
+            margin-top: calc(12 / 3.93 * 1vw);
         }
     }
 }
@@ -42,6 +55,11 @@
         grid-template-columns: 1fr calc(64 / 1440 * 100vw);
     }
 
+    @include mobile{
+        grid-template-columns: 1fr calc(48 / 3.93 * 1vw);
+        align-items: center;
+    }
+
     & button {
         background-color: rgba(105, 191, 243, 0.2);
         display: flex;
@@ -51,12 +69,24 @@
         border: none;
         cursor: pointer;
 
+        @include mobile{
+            width: calc(48 / 3.93 * 1vw);
+            height: calc(48 / 3.93 * 1vw);
+        }
+
         &.active svg {
             transform: none;
         }
 
+        &::after{
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+        }
+
         & svg {
-            transition: transform 0.3s linear;
+            transition: transform 0.2s linear;
             width: 22px;
             height: 13px;
             transform: rotate(180deg);
@@ -64,6 +94,11 @@
             @include big-desktop{
                 width: calc(22 / 14.4 * 1vw);
                 height: calc(13 / 14.4 * 1vw);
+            }
+
+            @include mobile{
+                width: calc(12 / 3.93 * 1vw);
+                height: calc(12 / 3.93 * 1vw);
             }
         }
     }
@@ -81,11 +116,29 @@
         padding-top: calc(24 / 14.4 * 1vw);
     }
 
+    @include mobile{
+        font-size: calc(16 / 3.93 * 1vw);
+        padding-top: calc(12 / 3.93 * 1vw);
+    }
+
     & p{
         margin: 0;
     }
 }
 .collapse-content {
-    transition: height 0.3s linear, opacity 0.3s linear;
+    transition: height 0.2s linear, opacity 0.2s linear;
     overflow: hidden;
+}
+
+.question_acc_title{
+    font-size: 20px;
+
+    @include big-desktop{
+        font-size: calc(20 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        margin: 0;
+        font-size: calc(20 / 3.93 * 1vw);
+    }
 }

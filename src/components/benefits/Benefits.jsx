@@ -1,13 +1,32 @@
+import React, { useState, useEffect } from 'react';
 import './benefits.scss';
 import vector from './images/Vector.svg';
 
 const Benefits = () => {
+
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 576);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 576);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <section className="section benefits">
             <div className="container">
                 <div className="benefits_inner">
-                    <div className="benefits_inner_item">
-                        <h2 className="project_title">Наши преимущества</h2>
+                    {isMobile && (
+                        <div className="benefits_inner_item --mobile">
+                            <h2 className="project_title">Наши преимущества</h2>
+                        </div>
+                    )}
+                    <div className="benefits_inner_item --desktop">
+                        <h2 className="project_title --desktop">Наши преимущества</h2>
                         <img src={vector} className='benefits_inner_item_img' alt="vektor" width={365} height={633} />
                     </div>
                     <div className="benefits_inner_item">

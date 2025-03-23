@@ -1,5 +1,12 @@
 @import '../../styles/breakpoint.scss';
 
+.cases{
+    & .container{
+        @include mobile{
+            padding: 0;
+        }
+    }
+}
 .cases_inner {
     background: #fcecdd;
     padding: 64px;
@@ -13,11 +20,20 @@
         border-radius: calc(32 / 14.4 * 1vw);
     }
 
+    @include mobile{
+        padding: calc(64 / 3.93 * 1vw) calc(20 / 3.93 * 1vw) 0;
+        border-radius: calc(24 / 3.93 * 1vw);
+    }
+
     & .project_title {
         margin-bottom: 40px;
 
         @include big-desktop{
             margin-bottom: calc(40 / 14.4 *  1vw);
+        }
+
+        @include mobile{
+            margin-bottom: calc(32 / 3.93 * 1vw);
         }
     }
 }
@@ -31,6 +47,15 @@
     @include big-desktop{
         top: calc(56 / 14.4 * 1vw);
         left: calc(56 / 14.4 * 1vw);
+        width: calc(70 / 14.4 * 1vw);
+        height: calc(43 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        width: calc(50 / 3.93 * 1vw);
+        height: calc(30 / 3.93 * 1vw);
+        top: calc(20 / 3.93 * 1vw);
+        left: calc(20 / 3.93 * 1vw);
     }
 }
 
@@ -43,6 +68,9 @@
     @include big-desktop{
         grid-template-columns: calc(64 / 14.4 * 1vw) 1fr calc(64 / 14.4 * 1vw);
         gap: calc(40 / 14.4 * 1vw);
+    }
+    @include mobile{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -57,10 +85,9 @@
 .embla__slide {
     flex: 0 0 100%;
 }
-.slider_dots{
-    margin-top: -40px;
 
-    @include big-desktop{
-        margin-top: calc(-40 / 14.4 * 1vw);
+.button-wrapper{
+    @include mobile{
+        display: none;
     }
 }

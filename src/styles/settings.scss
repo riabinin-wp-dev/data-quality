@@ -15,6 +15,10 @@
     @include big-desktop{
         padding: 0 calc(30 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        padding: 0 calc(20 / 3.93 * 1vw);
+    }
 }
 
 html,
@@ -30,6 +34,10 @@ body {
     @include big-desktop{
         font-size: calc(16 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        font-size: calc(16 / 3.93 * 1vw);
+    }
 }
 
 img {
@@ -43,6 +51,11 @@ img {
     width: 100%;
     height: auto;
 }
+// .App{
+//     display: flex;
+//     flex-direction: column;
+//     overflow: hidden;
+// }
 
 a {
     text-decoration: none;
@@ -132,15 +145,34 @@ a {
     margin-right: auto;
     position: relative;
     z-index: 2;
+    transition: background-color 0.2s linear;
 
     @include big-desktop{
         padding: calc(32 / 14.4 * 1vw) calc(48 / 14.4 * 1vw);
         gap: calc(16 / 14.4 * 1vw);
         font-size: calc(20 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        padding: calc(21 / 3.93 * 1vw) calc(32 / 3.93 * 1vw);
+        font-size: calc(18 / 3.93 * 1vw);
+        border-radius: calc(300 / 3.93 * 1vw);
+        gap: calc(16 / 3.93 * 1vw);
+    }
+
+    @media (hover:hover){
+        &:hover{
+            background-color: var(--accent-color-hover);
+
+            &::after{
+                transform: rotate(45deg);
+            }
+        }
+    }
 }
 
 .accent_button.project_link::after {
+    transition: transform 0.2s linear;
     content: '';
     width: 24px;
     height: 24px;
@@ -153,6 +185,11 @@ a {
         width: calc(24 / 14.4 * 1vw);
         height: calc(24/ 14.4 * 1vw);
     }
+
+    @include mobile{
+        width: calc(24 / 3.93 * 1vw);
+        height: calc(24 / 3.93 * 1vw);
+    }
 }
 
 .section {
@@ -160,6 +197,11 @@ a {
 
     @include big-desktop{
         margin: calc(115 / 14.4 * 1vw) 0;
+    }
+
+    @include mobile{
+        margin:  calc(64 / 3.93 * 1vw) 0;
+        overflow: hidden;
     }
 }
 
@@ -176,6 +218,10 @@ a {
     @include big-desktop{
         font-size: calc(76 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        font-size: calc(40 / 3.93 * 1vw);
+    }
 }
 
 .project_title {
@@ -190,6 +236,10 @@ a {
     @include big-desktop{
         font-size: calc(48 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        font-size: calc(32 / 3.93 * 1vw);
+    }
 }
 
 .project_description {
@@ -197,6 +247,23 @@ a {
     text-align: center;
     margin: 0;
     text-wrap: balance;
+    display: block;
+    margin-bottom: 56px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+    color: #283034;
+
+    @include big-desktop{
+        font-size: calc(18 / 14.4 * 1vw);
+        margin-bottom: calc(56 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        font-size: calc(16 / 3.93 * 1vw);
+        margin-bottom: calc(24 / 3.93 * 1vw);
+        line-height: 140%;
+    }
 }
 
 .mb40 {
@@ -204,6 +271,10 @@ a {
 
     @include big-desktop {
         margin-bottom: calc(40 / 1440 * 100vw);
+    }
+
+    @include mobile{
+        margin-bottom: calc(24 / 3.93 * 1vw);
     }
 }
 
@@ -213,6 +284,8 @@ a {
     @include big-desktop {
         margin-bottom: calc(60 / 1440 * 100vw);
     }
+
+    
 }
 
 .mt60 {
@@ -220,6 +293,10 @@ a {
 
     @include big-desktop {
         margin-top: calc(60 / 1440 * 100vw);
+    }
+
+    @include mobile{
+        margin-top: calc(24 / 3.93 * 1vw);
     }
 }
 
@@ -242,10 +319,16 @@ a {
     display: block;
     width: 100%;
     border: none;
+    font-family: var(--font-family);
 
     @include big-desktop{
         padding: calc(20 / 14.4 * 1vw) calc(24 / 14.4 * 1vw);
         font-size: calc(16 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        padding: calc(20 / 3.93 * 1vw) calc(24 / 3.93 * 1vw);
+        font-size: calc(14 / 3.93 * 1vw);
     }
 
     &::placeholder {
@@ -273,10 +356,19 @@ a {
     display: block;
     width: 100%;
     border: none;
+    font-family: var(--font-family);
+    border: 1px solid #d2dade;
 
     @include big-desktop{
         padding: calc(24 / 14.4 * 1vw) calc(24 / 14.4 * 1vw) calc(64 / 14.4 * 1vw) calc(24 / 14.4 * 1vw);
         font-size: calc(16 / 14.4 * 1vw);
+        border-radius: calc(24 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        padding: calc(24 / 3.93 * 1vw);
+        font-size: calc(16 / 3.93 * 1vw);
+        border-radius: calc(16 / 3.93 * 1vw);
     }
 
     &::placeholder {
@@ -306,12 +398,22 @@ a {
     background-repeat: no-repeat;
     background-position: right 25px center;
     background-size: 7px;
+    font-family: var(--font-family);
+    border: 1px solid #d2dade;
 
     @include big-desktop{
         padding: calc(20 / 14.4 * 1vw) calc(24 / 14.4 * 1vw);
         font-size: calc(16 / 14.4 * 1vw);
         background-position: right calc(25 / 14.4 * 1vw) center;
         background-size: calc(7 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        padding: calc(20 / 3.93 * 1vw) calc(24 / 3.93 * 1vw);
+        font-size: calc(16 / 3.93 * 1vw);
+        background-position: right calc(25 / 3.93 * 1vw) center;
+        background-size: calc(7 / 3.93 * 1vw);
+        border-radius: calc(16 / 3.93 * 1vw);
     }
 
     &::placeholder {
@@ -335,6 +437,11 @@ a {
         font-size: calc(16 / 14.4 * 1vw);
         padding: calc(10 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        font-size: calc(16 / 3.93 * 1vw);
+        padding: calc(10 / 3.93 * 1vw);
+    }
 }
 
 .project_submit {
@@ -346,8 +453,15 @@ a {
     font-size: 20px;
     line-height: 120%;
     color: #fff;
+    font-family: var(--font-family);
 
     @include big-desktop{
         font-size: calc(20 / 14.4 * 1vw);
+    }
+
+    @include mobile{
+        font-size: calc(18 / 3.93 * 1vw);
+        padding: calc(21 / 3.93 * 1vw) 0;
+        line-height: 1;
     }
 }

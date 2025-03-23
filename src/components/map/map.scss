@@ -6,8 +6,20 @@
     @include big-desktop{
         margin-bottom: calc(55 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        margin-bottom: calc(32 / 3.93 * 1vw);
+    }
 }
 .source_map{
     max-width: 100%;
     height: auto;
+}
+
+.map .container{
+    &:first-child{
+        @include mobile{
+            padding: 0 calc(8 / 3.93 * 1vw);
+        }
+    }
 }

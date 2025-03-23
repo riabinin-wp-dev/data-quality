@@ -8,6 +8,16 @@
     border: 1px solid #d2dade;
     border-radius: 32px;
     padding: 40px;
+    cursor: grabbing;
+    position: relative;
+    height: 100%;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }
 
     @include big-desktop {
         gap: calc(40 / 14.4 * 1vw);
@@ -15,6 +25,15 @@
         padding: calc(40 / 14.4 * 1vw);
         border-width: calc(1 / 14.4 * 1vw);
         grid-template-columns: 1fr calc(313 / 14.4 * 1vw) calc(190 / 14.4 * 1vw);
+    }
+
+    @include mobile {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+        gap: calc(16 / 3.93 * 1vw);
+        padding: calc(24 / 3.93 * 1vw);
+        border-radius: calc(16 / 3.93 * 1vw);
     }
 }
 
@@ -33,6 +52,11 @@
         font-size: calc(32 / 14.4 * 1vw);
         margin-bottom: calc(12 / 14.4 * 1vw);
     }
+
+    @include mobile {
+        font-size: calc(24 / 3.93 * 1vw);
+        margin-bottom: calc(12 / 3.93 * 1vw);
+    }
 }
 
 .case_slide_item_desc {
@@ -44,11 +68,19 @@
         font-size: calc(16 / 14.4 * 1vw);
     }
 
+    @include mobile {
+        font-size: calc(16 / 3.93 * 1vw);
+    }
+
     & p {
         margin: 0 0 20px 0;
 
         @include big-desktop {
             margin: 0 0 calc(20 / 14.4 * 1vw) 0;
+        }
+
+        @include mobile {
+            margin: calc(12 / 3.93 * 1vw) 0;
         }
     }
 
@@ -64,6 +96,10 @@
             gap: calc(8 / 14.4 * 1vw);
         }
 
+        @include mobile {
+            gap: calc(4 / 3.93 * 1vw);
+        }
+
         & li {
             display: flex;
             align-items: center;
@@ -71,6 +107,10 @@
 
             @include big-desktop {
                 gap: calc(12 / 14.4 * 1vw);
+            }
+
+            @include mobile {
+                gap: calc(12 / 3.93 * 1vw);
             }
 
             &::before {
@@ -85,12 +125,25 @@
                     width: calc(8 / 14.4 * 1vw);
                     height: calc(8 / 14.4 * 1vw);
                 }
+
+                @include mobile {
+                    width: calc(8 / 3.93 * 1vw);
+                    height: calc(8 / 3.93 * 1vw);
+                }
             }
         }
     }
 }
 
 .case_slide_item:nth-child(2) {
+    display: flex;
+
+    @include mobile {
+        order: 10;
+        // width: calc(305 / 3.73 * 1vw);
+        // height: calc(177 / 3.73 * 1vw);
+    }
+
     & img {
         border: 1px solid #d2dade;
         border-radius: 24px;
@@ -98,6 +151,12 @@
         @include big-desktop {
             border-width: calc(1 / 14.4 * 1vw);
             border-radius: calc(24 / 14.4 * 1vw);
+        }
+
+        @include mobile {
+            width: calc(305 / 3.73 * 1vw);
+            height: calc(177 / 3.73 * 1vw);
+            border-radius: calc(12 / 3.73 * 1vw);
         }
     }
 }
@@ -111,6 +170,14 @@
         gap: calc(16 / 14.4 * 1vw);
     }
 
+    @include mobile{
+        gap: calc(16 / 3.93 * 1vw);
+        grid-template-rows: unset;
+        grid-template-columns: 1fr 1fr;
+        min-height: calc(118 / 3.93 * 1vw);
+        margin-top: auto;
+    }
+
     & li:first-child {
         border-radius: 24px;
         padding: 20px;
@@ -122,6 +189,11 @@
         @include big-desktop {
             border-radius: calc(24 / 14.4 * 1vw);
             padding: calc(20 / 14.4 * 1vw);
+        }
+
+        @include mobile{
+            padding: calc(12 / 3.93 * 1vw) calc(16 / 3.93 * 1vw);
+            border-radius: calc(12 / 3.93 * 1vw);
         }
     }
 
@@ -138,6 +210,11 @@
             border-width: calc(1 / 14.4 * 1vw);
             border-radius: calc(24 / 14.4 * 1vw);
             padding: calc(20 / 14.4 * 1vw);
+        }
+
+        @include mobile{
+            padding: calc(12 / 3.93 * 1vw) calc(16 / 3.93 * 1vw);
+            border-radius: calc(12 / 3.93 * 1vw);
         }
 
         & small {
@@ -159,6 +236,11 @@
             font-size: calc(56 / 14.4 * 1vw);
             margin-bottom: calc(5 / 14.4 * 1vw);
         }
+
+        @include mobile{
+            font-size: calc(36 / 3.93 * 1vw);
+            margin-bottom: calc(4 / 3.93 * 1vw);
+        }
     }
 
     & dd {
@@ -169,6 +251,10 @@
 
         @include big-desktop {
             font-size: calc(14 / 14.4 * 1vw);
+        }
+        
+        @include mobile{
+            font-size: calc(14 / 3.93 * 1vw);
         }
     }
 }
@@ -182,6 +268,10 @@
     @include big-desktop {
         font-size: calc(12 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        font-size: calc(12 / 3.93 * 1vw);
+    }
 }
 
 .case_slide_item_industry {
@@ -193,9 +283,13 @@
     @include big-desktop {
         font-size: calc(12 / 14.4 * 1vw);
     }
+    @include mobile{
+        font-size: calc(12 / 3.93 * 1vw);
+    }
 }
 
 .project_arrow {
+    border: none;
     width: 64px;
     height: 64px;
     border-radius: 50%;
@@ -222,16 +316,23 @@
         padding-right: calc(10 / 14.4 * 1vw);
     }
 }
-
 .slider_dots {
     grid-column: 3 span;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 8px;
-
-    @include big-desktop{
+    margin-top: -40px;
+    
+    @include big-desktop {
         gap: calc(8 / 14.4 * 1vw);
+        margin-top: calc(-40 / 14.4 * 1vw);
+    }
+
+    @include mobile {
+        grid-column: unset;
+        margin-top: calc(24 / 3.93 * 1vw);
+        margin-bottom: calc(64 / 3.93 * 1vw);
     }
 
     & .dot {
@@ -241,13 +342,18 @@
         height: 8px;
         flex-shrink: 0;
         background-color: #d2dade;
-        transition: background-color, width 0.3s linear;
+        // transition: background-color, width 0.3s linear;
         border: none;
         padding: 0;
 
-        @include big-desktop{
+        @include big-desktop {
             width: calc(8 / 14.4 * 1vw);
             height: calc(8 / 14.4 * 1vw);
+        }
+
+        @include mobile{
+            width: calc(8 / 3.93 * 1vw);
+            height: calc(8 / 3.93 * 1vw);
         }
 
         &.active {
@@ -255,9 +361,13 @@
             width: 12px;
             height: 12px;
 
-            @include big-desktop{
+            @include big-desktop {
                 width: calc(12 / 14.4 * 1vw);
                 height: calc(12 / 14.4 * 1vw);
+            }
+            @include mobile{
+                width: calc(12 / 3.93 * 1vw);
+                height: calc(12 / 3.93 * 1vw);
             }
         }
     }

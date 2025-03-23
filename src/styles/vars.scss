@@ -11,6 +11,7 @@
     /* --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2)); */
 
     --accent-color: #45b0f0;
+    --accent-color-hover: #118dd7;
     --text-color: #283034;
     --background-color: #9bd4f7;
 }
@@ -18,5 +19,12 @@
     :root{
         --content-width: calc(1312 / 14.4 * 1vw);
         --container-offset: calc(30 / 14.4 * 1vw);
+    }
+}
+
+@include mobile{
+    :root{
+        --content-width: calc(353 / 3.93 * 1vw);
+        --container-offset: calc(20 / 3.93 * 1vw);
     }
 }

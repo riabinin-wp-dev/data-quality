@@ -9,9 +9,28 @@
     border: 1px solid #d2dade;
     border-radius: 24px;
     padding: 32px 24px;
+    position: relative;
 
-    &:last-child{
+    @include big-desktop {
+        gap: calc(24 / 1440 * 100vw);
+        padding: calc(32 / 1440 * 100vw) calc(24 / 1440 * 100vw);
+        border-radius: calc(24 / 1440 * 100vw);
+        grid-template-columns: calc(80 / 1440 * 100vw) 1fr calc(84 / 1440 * 100vw);
+    }
+
+    @include mobile {
+        gap: calc(16 / 3.93 * 1vw);
+        grid-template-columns: 1fr calc(64 / 3.93 * 1vw);
+        grid-template-rows: auto auto;
+        padding: calc(12 / 3.93 * 1vw) calc(20 / 3.93 * 1vw);
+    }
+
+    &:last-child {
         grid-column: 2 span;
+
+        @include mobile {
+            grid-column: 1 span;
+        }
     }
 
     & .img-wrap {
@@ -21,32 +40,44 @@
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        padding: 12px;
+        padding-right: 0;
+
+        @include big-desktop {
+            padding: calc(12 / 14.4 * 1vw);
+            padding-right: 0;
+            border-radius: calc(16 / 1440 * 100vw);
+            border-width: calc(1 / 14.4 * 1vw);
+        }
+
+        @include mobile {
+            // padding: calc(12 / 3.93 * 1vw);
+            border-radius: calc(12 / 3.93 * 1vw);
+            width: calc(80 / 3.93 * 1vw);
+            height: calc(80 / 3.93 * 1vw);
+            grid-column: 2 span;
+
+        }
 
         & img {
             width: 56px;
             height: 56px;
             object-fit: contain;
-        }
-    }
+            object-position: right;
 
-    @include big-desktop{
-        gap: calc(24 / 1440 * 100vw);
-        padding: calc(32 / 1440 * 100vw) calc(24 / 1440 * 100vw);
-        border-radius: calc(24 / 1440 * 100vw);
-        grid-template-columns: calc(80 / 1440 * 100vw) 1fr calc(84 / 1440 * 100vw);
+            @include big-desktop {
+                & img {
+                    width: calc(56 / 1440 * 100vw);
+                    height: calc(56 / 1440 * 100vw);
+                }
+            }
 
-        & .img-wrap {
-            border-radius: calc(16 / 1440 * 100vw);
-            border-width: calc(1 / 14.4 * 1vw);
-
-            & img {
-                width: calc(56 / 1440 * 100vw);
-                height: calc(56 / 1440 * 100vw);
+            @include mobile {
+                width: calc(56 / 3.93 * 1vw);
+                height: calc(56 / 3.93 * 1vw);
             }
         }
     }
-
-
 }
 
 .sfera_item_title {
@@ -59,9 +90,24 @@
     letter-spacing: -0.03em;
     color: #283034;
 
-    @include big-desktop{
+    @include big-desktop {
         font-size: calc(20 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        font-size: calc(18 / 3.93 * 1vw);
+    }
+}
+
+.sfera_item_link:hover {
+    @media (hover: hover) {
+        background-color: var(--accent-color-hover);
+
+        & svg {
+            rotate: 45deg;
+        }
+    }
+
 }
 
 .sfera_item_link {
@@ -72,9 +118,38 @@
     padding: 24px 32px;
     background-color: var(--accent-color);
     cursor: pointer;
+    transition: background-color 0.15s linear;
 
-    @include big-desktop{
+
+    &::after {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        content: '';
+    }
+
+    & svg {
+        transition: all 0.15s linear;
+
+        @include big-desktop {
+            width: calc(20 / 14.4 * 1vw);
+            height: calc(20 / 14.4 * 1vw);
+        }
+
+        @include mobile {
+            width: calc(20 / 3.93 * 1vw);
+            height: calc(20 / 3.93 * 1vw);
+            ;
+        }
+    }
+
+    @include big-desktop {
         padding: calc(24 / 14.4 * 1vw) calc(32 / 14.4 * 1vw);
         border-radius: calc(300 / 14.4 * 1vw);
+    }
+
+    @include mobile {
+        padding: calc(16 / 3.93 * 1vw) calc(22 / 3.93 * 1vw);
+        border-radius: calc(300 / 3.93 * 1vw);
     }
 }

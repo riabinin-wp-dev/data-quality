@@ -1,0 +1,23 @@
+@import '../../styles/breakpoint.scss';
+
+.banner {
+
+    @include mobile{
+        border-radius: calc(24 / 3.93 * 1vw);
+        overflow: hidden;
+    }
+
+    & .container{
+        @include mobile{
+            padding: 0;
+            display: flex;
+        }
+    }
+    & img {
+        @include mobile {
+            width: calc(795 / 3.93 * 1vw);
+            height: calc(300 / 3.93 * 1vw);
+            object-position: 60% center;
+        }
+    }
+}

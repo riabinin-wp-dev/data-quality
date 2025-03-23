@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 
 const AnimatedPath = ({ path, duration = 8 }) => {
   const pathRef = useRef(null);
   const progress = useMotionValue(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 576);
 
   // Преобразуем прогресс в координаты x и y
   const x = useTransform(progress, (value) => {
@@ -19,7 +20,16 @@ const AnimatedPath = ({ path, duration = 8 }) => {
   });
 
   useEffect(() => {
-    if (!pathRef.current) return;
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 576);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!pathRef.current || isMobile) return;
 
     const pathElement = pathRef.current;
     const pathLength = pathElement.getTotalLength();
@@ -32,7 +42,7 @@ const AnimatedPath = ({ path, duration = 8 }) => {
     });
 
     return () => animation.stop();
-  }, [progress, duration]);
+  }, [progress, duration, isMobile]); // Добавили `isMobile` в зависимости
 
   return (
     <>
@@ -43,12 +53,14 @@ const AnimatedPath = ({ path, duration = 8 }) => {
         fill="none"
         strokeWidth="2"
       />
-      <motion.circle
-        cx={x}
-        cy={y}
-        r="8"
-        fill="#F2AB68"
-      />
+      {!isMobile && ( // Убираем круг, если экран маленький
+        <motion.circle
+          cx={x}
+          cy={y}
+          r="8"
+          fill="#F2AB68"
+        />
+      )}
     </>
   );
 };

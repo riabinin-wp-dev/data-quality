@@ -8,7 +8,7 @@ const Intro = () => {
         <section className="section intro">
             <div className="container">
                 <div className="intro_inner">
-                    <h1 className="project_title_h1 mb40">Тайные проверки <br /> по регионам РФ и СНГ</h1>
+                    <h1 className="project_title_h1 mb40">Тайные проверки <br /> по регионам <br className="mobile" /> РФ и СНГ</h1>
                     <p className="project_description mb60">Вы можете заказать услугу по проверке тайным покупателем по нескольким схемам в зависимости от ваших потребностей. Отчёт тайного покупателя мы предоставляем в виде аудиозаписи посещения и чек-листа с комментариями и оценками.</p>
                     <a href="#!" className="project_link accent_button mt60">Заказать услугу</a>
                     <div className="intro_diagramm">

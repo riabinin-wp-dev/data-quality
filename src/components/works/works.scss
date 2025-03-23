@@ -9,6 +9,12 @@
     @include big-desktop{
         gap: calc(32 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        grid-template-columns: repeat(6, 1fr);
+        gap: 12px;
+        width: calc(100% + 20 / 3.93 * 1vw);
+    }
 }
 .works .grid-row svg{
     position: absolute;
@@ -21,11 +27,20 @@
         width: calc(1263 / 14.4 * 1vw);
         height: calc(890 / 14.4 * 1vw);
     }
+
+    @include mobile{
+        display: none;
+    }
 }
 
 .works_item:nth-child(1) { 
     grid-column: 1 ;
     grid-row:  1;
+
+    @include mobile{
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 .works_item:nth-child(1) .img-wrap {
     background: rgba(105, 191, 243, 0.2);
@@ -33,6 +48,11 @@
 .works_item:nth-child(2) { 
     grid-column: 3 ;
     grid-row:  1;
+
+    @include mobile{
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 .works_item:nth-child(2) .img-wrap {
     background: rgba(242, 212, 104, 0.2);
@@ -40,6 +60,11 @@
 .works_item:nth-child(3) { 
     grid-column: 2;
     grid-row: 2;
+
+    @include mobile{
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 .works_item:nth-child(3) .img-wrap {
     background: rgba(104, 242, 221, 0.2);
@@ -47,6 +72,11 @@
 .works_item:nth-child(4) { 
     grid-column: 4;
     grid-row: 2;
+
+    @include mobile{
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 .works_item:nth-child(4) .img-wrap {
     background: rgba(210, 218, 222, 0.2);
@@ -54,6 +84,11 @@
 .works_item:nth-child(5) { 
     grid-column: 1 ;
     grid-row: 3;
+
+    @include mobile{
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 .works_item:nth-child(5) .img-wrap {
     background: rgba(105, 191, 243, 0.2);
@@ -61,6 +96,11 @@
 .works_item:nth-child(6) { 
     grid-column: 3 ;
     grid-row: 3;
+
+    @include mobile{
+        grid-column: unset;
+        grid-row: unset;
+    }
 }
 .works_item:nth-child(6) .img-wrap {
     background: rgba(242, 212, 104, 0.2);
